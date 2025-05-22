@@ -4,7 +4,8 @@ import os
 import streamlit as st
 from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage
-
+st.write("APIキーの取得チェック")
+st.write("OPENAI_API_KEY is set:", os.getenv("OPENAI_API_KEY") is not None)
 # --- タイトルと説明 ---
 st.title("提出課題: 回答専門家の選択")
 
