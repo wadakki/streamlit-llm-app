@@ -34,7 +34,7 @@ if st.button("実行"):
                 "機械設備の整備": "あなたは経験豊富な機械設備の整備士です。機械の保守や故障診断に関して専門的に答えてください。"
             }.get(expert_type, "あなたは親切なアシスタントです。")
 
-            llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0)
+            llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0, openai_api_key=os.getenv("OPENAI_API_KEY"))
 
             messages = [
                 SystemMessage(content=system_prompt),
